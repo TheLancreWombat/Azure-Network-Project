@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Diagrams/Azure network diagram.png)
+![TODO: Update the path with the name of your diagram](https://github.com/TheLancreWombat/Azure-Network-Project/blob/main/Diagrams/Azure%20network%20diagram.png "Network Diagram")
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the install_elk.yml file may be used to install only certain pieces of it, such as Filebeat.
 
