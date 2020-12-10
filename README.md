@@ -19,14 +19,14 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, in addition to restricting ?network traffic? to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_ Load balancers protect the availability of the network from potential DDOS attacks
+Load balancing ensures that the application will be highly available, in addition to restricting the amount of traffic to the network.
+s
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the system logs changes and system resource use.
 
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 | Name     | Function | Ip Address               | Operating system |
 |----------|----------|--------------------------|------------------|
 | Web 1    | Traffic  | 10.0.0.4                 | Ubuntu 18.04     |
@@ -60,6 +60,7 @@ The playbook implements the following tasks:
 - Installs Docker
 - Downloads docker container image sebp/elk:761 with ports 5601, 9200, and 5044 opened 
 - Makes sure docker starts on restart
+- Increases Virtual memory so Elk can install 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
