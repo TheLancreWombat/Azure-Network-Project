@@ -1,0 +1,30 @@
+---
+- name: My first playbook
+  hosts: webservers
+  become: true
+  tasks:
+  - name: Install docker.io and python3-pip (state=present is optional)
+    apt:
+      name: docker.io
+      state: present
+  - name: install python  
+    apt:
+      name: python3-pip
+      state: present
+  - name: Install docker
+    pip: 
+      name: docker
+      state: present
+  - name: download docker
+    docker_container:
+      name: dvwa
+      image: cyberxsecurity/dvwa
+      state: started
+      published_ports: 80:80
+      restart_policy: always
+  - name: start docker on restart
+    systemd:
+      name: docker
+      enabled: yes
+  
+
